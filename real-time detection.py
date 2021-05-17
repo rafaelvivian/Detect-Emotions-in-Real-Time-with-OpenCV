@@ -7,7 +7,6 @@ from keras.models import model_from_json
 from keras.preprocessing import image
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-import time
 
 model = model_from_json(open("fer.json", "r").read())
 model.load_weights('fer.h5') 
