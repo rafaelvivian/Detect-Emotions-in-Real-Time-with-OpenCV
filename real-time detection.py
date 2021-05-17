@@ -7,6 +7,7 @@ from keras.models import model_from_json
 from keras.preprocessing import image
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import time
 
 model = model_from_json(open("fer.json", "r").read())
 model.load_weights('fer.h5') 
@@ -57,7 +58,7 @@ while True:
         print(emotion_prediction)
         
         #Write on the frame the emotion detected
-        cv2.putText(frame,emotion_prediction,(int(x), int(y)),cv2.FONT_HERSHEY_SIMPLEX,2,(0,255,0),3)
+        cv2.putText(frame,emotion_prediction,(int(x), int(y)),cv2.FONT_HERSHEY_SIMPLEX,2,(0,255,0),3)        
     
     resize_image = cv2.resize(frame, (1200, 700))
     cv2.imshow('Emotion',resize_image)
