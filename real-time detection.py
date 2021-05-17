@@ -51,7 +51,7 @@ while True:
         predictions = model.predict(image_pixels)
         print(predictions)
         max_index = np.argmax(predictions[0])
-        emotion_detection = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
+        emotion_detection = ('raiva', 'aversão', 'medo', 'feliz', 'triste', 'surpreso', 'neutro')
         emotion_prediction = emotion_detection[max_index]
         
         print(emotion_prediction)
