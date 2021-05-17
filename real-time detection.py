@@ -38,7 +38,7 @@ while True:
     for (x,y,w,h) in faces_detected:
         cv2.rectangle(frame,(x,y), (x+w,y+h), (255,0,0), thickness=7)
         roi_gray=gray_image[y:y+w,x:x+h]
-        roi_gray=cv2.resize(roi_gray,(400,400))
+        roi_gray=cv2.resize(roi_gray,(28,28))
         
         #Processes the image and adjust it to pass it to the model
         image_pixels = tf.keras.preprocessing.image.img_to_array(roi_gray)
